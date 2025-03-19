@@ -1,0 +1,24 @@
+# Ignorer le dossier de build
+build/
+
+# Fichiers générés par CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Fichiers binaires et exécutables
+*.exe
+*.out
+*.o
+*.obj
+
+# Fichiers de logs et temporaires
+*.log
+*.tmp
+
+# Éventuels fichiers spécifiques à certains éditeurs
+.vscode/
+.idea/
+*.swp
+*.swo
