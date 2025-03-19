@@ -4,18 +4,6 @@
 #include <iostream>
 #include <chrono>
 
-bool is_sorted(std::vector<int> const &vec) { return std::is_sorted(vec.begin(), vec.end()); }
-
-void afficher_tab(std::vector<int> const &vec)
-{
-    for (int i = 0; i < vec.size(); i++)
-    {
-        std::cout << vec[i] << " ";
-    }
-    std::cout << std::endl;
-}
-
-
 //version récursive
 int search_recur(std::vector<int> const &vec, int value, int left, int right)
 {
@@ -60,11 +48,11 @@ int search_iter(std::vector<int> const &vec, int value)
         }
         else
         {
-            return mid; // Élément trouvé
+            return mid; 
         }
     }
 
-    return -1; // Élément non trouvé
+    return -1;
 }
 
 
