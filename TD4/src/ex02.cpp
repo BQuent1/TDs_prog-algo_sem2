@@ -42,7 +42,7 @@ void afficher_words(std::vector<std::string> const& words){
 
 int main(){
 
-    std::string str {"Maitre corbeau sur son arbre perché tenait en son bec un fromage, Matre renard par l'odeur alleché lui tint a peu pres ce langage. Et bonjour Monsieur du corbeau, que vous êtes joli, que vous êtes beau, sans mentir si votre ramage se rapporte a votre plumage, vous êtes le phénix des hôtes de ces bois."};
+    std::string str {"Maitre corbeau sur son arbre perche tenait en son bec un fromage, Matre renard par l'odeur alleche lui tint a peu pres ce langage. Et bonjour Monsieur du corbeau, que vous êtes joli, que vous êtes beau, sans mentir si votre ramage se rapporte a votre plumage, vous êtes le phenix des hôtes de ces bois."};
     std::cout << "Le premier mot contient " << compteur_lettre_premier_mot(str) << " lettres" << std::endl;
 
     std::vector<std::string> words {split_string(str)};
