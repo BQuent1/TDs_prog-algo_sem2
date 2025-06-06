@@ -1,4 +1,6 @@
-#pragma once
+#ifndef NODE_HPP
+#define NODE_HPP
+
 #include <vector>
 
 struct Node
@@ -7,13 +9,32 @@ struct Node
     Node *left{nullptr};
     Node *right{nullptr};
 
-    Node *create_node(int value);
+    Node(int val);
+    Node(int val, Node *leftChild, Node *rightChild);
+
+    ~Node();
+
     bool is_leaf() const;
+
     void insert(int value);
+
     int height() const;
-    void delete_childs();
-    int height() const;
-    void display_infixe() const;
-    std::vector<Node const*> prefixe() const;
-    void pretty_print_left_right(Node const& node, std::string const& prefix, bool is_left);
+
+    void delete_children();
+
+    void display_infix() const;
+
+    std::vector<Node const *> prefix() const;
+
+    std::vector<Node const *> postfix() const;
+
+    static Node *&most_left(Node *&node);
+
+    static bool remove(Node *&node, int value);
+
+    static void delete_tree(Node *node);
 };
+
+Node *create_node(int value);
+
+#endif
